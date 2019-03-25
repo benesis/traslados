@@ -1,0 +1,53 @@
+@import 'font'
+@import 'color'
+@import 'mixins'
+
+$radius: 5
+.card
+  +card($radius)
+.btn.btn-primary
+  +material-button(mix($magenta, $blue, 50))
+.btn.btn-secondary
+  +material-button($orange)
+  color: $white
+.btn.btn-accent
+  +material-button($magenta)
+  color: $white
+.btn.btn-info
+  +material-button($blue)
+  color: $white
+
+
+body
+  padding-top: 70px
+  background-color: $bg
+  font-family: Aller
+  font-size: 14px
+
+  h4.card-head
+    color: $primary
+    font-size: 16px
+
+  .navbar, .navbar-default
+    li.active 
+      color: $text
+      &>a
+        background-color: lighten($active, 10) !important
+  .navbar-brand, .logo
+    height: 40px
+    padding: 5px
+    line-height: 40px
+  .user-img
+    line-height: 20px
+    height: 35px
+    width: 35px
+    float: right 
+    border: 1px solid black
+    margin-left: 10px
+    margin-top: -7px
+  
+  .spacer
+    height: 20px
+
+  .logout
+    color: $magenta!important
